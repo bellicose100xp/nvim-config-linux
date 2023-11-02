@@ -10,6 +10,8 @@ return {
     local mason = require("mason")
 
     mason.setup()
+
+    -- Setup LSP for Python
     lspconfig.pyright.setup {}
 
   end,
