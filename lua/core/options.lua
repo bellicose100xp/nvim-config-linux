@@ -2,10 +2,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Line Number Color -> *** NOT WORKING ***
--- vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='darkgrey' })
--- vim.api.nvim_set_hl(0, 'LineNr', { fg='darkgrey' })
--- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='darkgrey' })
+-- Open window (such as help) on buttom instead of top
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 -- Set indentation
 vim.opt.tabstop = 4 -- Tab corresponds to 4 spaces
@@ -15,7 +14,10 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 -- Set clipboard to be system clipboard
 vim.opt.clipboard = 'unnamedplus'
 
--- Disable Right-Click Mouse Options
+-- In Visual-Block mode, allow cursors to go past the end of line — this is useful for selecting multi-line content when line lengths are not the same.
+vim.opt.virtualedit = "block"
+
+-- Disable Right-Click Mouse Options — Needed to right-click paste function to work in dev desktop
 vim.opt.mouse = ""
 
 -- Set Cursor Blinking in Normal and Insert Mode
@@ -31,7 +33,10 @@ vim.cmd[[
     au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
     augroup END
 ]]
-
 -- search settings
+
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+
+-- Show all colors in the terminals
+vim.opt.termguicolors = true
