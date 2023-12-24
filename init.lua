@@ -6,4 +6,5 @@ require("core.lazy")
 -- Key-mapping and vim options
 require("core.mappings")
 require("core.options")
+require("core.text_objects")
 

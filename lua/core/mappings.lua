@@ -32,6 +32,7 @@ vim.keymap.set("n", "s", '"_s')
 -- Select All
 vim.keymap.set("n", "<leader>a", "ggVG", {noremap = true, desc = "Select All"})
 
+
 -- increment/decrement numbers
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
