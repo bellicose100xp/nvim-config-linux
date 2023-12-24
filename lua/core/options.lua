@@ -15,12 +15,14 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 -- Set clipboard to be system clipboard
 vim.opt.clipboard = 'unnamedplus'
 
+-- Disable Right-Click Mouse Options
+vim.opt.mouse = ""
+
 -- Set Cursor Blinking in Normal and Insert Mode
 -- n-v-c: Normal Modes -> block: block cursor
 -- i-ci-ve: Insert Modes -> ver25: line-cursor
 -- a: All Modes -> Set Blinking Rate
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250"
-
 
 -- highlight yanked text for 200ms using the "Visual" highlight group
 vim.cmd[[
