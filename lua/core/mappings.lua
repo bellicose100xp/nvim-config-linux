@@ -32,10 +32,43 @@ vim.keymap.set("n", "s", '"_s')
 -- Select All
 vim.keymap.set("n", "<leader>a", "ggVG", {noremap = true, desc = "Select All"})
 
-
 -- increment/decrement numbers
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+
+-- Line Object
+vim.keymap.set('n', 'vil', '^v$', { noremap = true, desc = "Select current line without leading whitespace" })
+vim.keymap.set('n', 'val', '0v$', { noremap = true, desc = "Select entire current line" })
+vim.keymap.set('n', 'yil', '^v$y', { noremap = true, desc = "Yank current line without leading whitespace" })
+vim.keymap.set('n', 'yal', '0v$y', { noremap = true, desc = "Yank entire current line" })
+vim.keymap.set('n', 'dil', '^d$', { noremap = true, desc = "Delete current line without leading whitespace" })
+vim.keymap.set('n', 'dal', '0d$', { noremap = true, desc = "Delete entire current line" })
+vim.keymap.set('n', 'cil', '^c$', { noremap = true, desc = "Change current line without leading whitespace" })
+vim.keymap.set('n', 'cal', '0c$', { noremap = true, desc = "Change entire current line" })
+
+-- Objects between comma(,)
+vim.keymap.set('n', 'vi,', 'T,vt,', { noremap = true, desc = "Select text between commas" })
+vim.keymap.set('n', 'di,', 'T,dt,', { noremap = true, desc = "Delete text between commas" })
+vim.keymap.set('n', 'ci,', 'T,ct,', { noremap = true, desc = "Change text between commas" })
+vim.keymap.set('n', 'va,', 'F,vf,', { noremap = true, desc = "Select text including commas" })
+vim.keymap.set('n', 'da,', 'F,df,', { noremap = true, desc = "Delete text including commas" })
+vim.keymap.set('n', 'ca,', 'F,ct,', { noremap = true, desc = "Change text including commas" })
+
+-- Objects between dash(-)
+vim.keymap.set('n', 'vi-', 'T-vt-', { noremap = true, desc = "Select text between dashes" })
+vim.keymap.set('n', 'di-', 'T-dt-', { noremap = true, desc = "Delete text between dashes" })
+vim.keymap.set('n', 'ci-', 'T-ct-', { noremap = true, desc = "Change text between dashes" })
+vim.keymap.set('n', 'va-', 'F-vf-', { noremap = true, desc = "Select text including dashes" })
+vim.keymap.set('n', 'da-', 'F-df-', { noremap = true, desc = "Delete text including dashes" })
+vim.keymap.set('n', 'ca-', 'F-ct-', { noremap = true, desc = "Change text including dashes" })
+
+-- Objects between asterisk(*)
+vim.keymap.set('n', 'vi*', 'T*vt*', { noremap = true, desc = "Select text between asterisks" })
+vim.keymap.set('n', 'di*', 'T*dt*', { noremap = true, desc = "Delete text between asterisks" })
+vim.keymap.set('n', 'ci*', 'T*ct*', { noremap = true, desc = "Change text between asterisks" })
+vim.keymap.set('n', 'va*', 'F*vf*', { noremap = true, desc = "Select text including asterisks" })
+vim.keymap.set('n', 'da*', 'F*df*', { noremap = true, desc = "Delete text including asterisks" })
+vim.keymap.set('n', 'ca*', 'F*ct*', { noremap = true, desc = "Change text including asterisks" })
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
