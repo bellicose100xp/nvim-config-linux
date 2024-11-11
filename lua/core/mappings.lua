@@ -8,11 +8,15 @@ vim.keymap.set("n", "<leader>j", "J", { desc = "Join line below" })
 vim.keymap.set("n", "<leader>o", "o<ESC>k", { desc = "Add Empty Line Below" })
 vim.keymap.set("n", "<leader>i", "O<ESC>j", { desc = "Add Empty Line Above" })
 
-vim.keymap.set("n", "<leader>v", "<C-q>", { desc = "Visual Block Mode" }) -- Visual block mode
+vim.keymap.set("n", "<leader>v", "<C-q>", { desc = "Visual Block Mode" })
+vim.keymap.set("n", "<leader>y", "mmggVGy`m", {desc = "Copy entire page"})
 
 -- Visual Mode Keymaps
 vim.keymap.set("v", ">", ">gv", {desc = "Re-select after indent"})
 vim.keymap.set("v", "<", "<gv", {desc = "Re-select after outdent"})
+
+-- Visual + Select Mode Mapping
+vim.keymap.set("x", "p", '"_dP')
 
 -- Move lines up and down
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { silent = true })
