@@ -18,7 +18,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.virtualedit = "block"
 
 -- Disable Right-Click Mouse Options — Needed to right-click paste function to work in dev desktop
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
 
 -- Set Cursor Blinking in Normal and Insert Mode
 -- n-v-c: Normal Modes -> block: block cursor
